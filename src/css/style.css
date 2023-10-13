@@ -104,6 +104,7 @@ body {
 }
 #hand-box {
   display: flex;
+  height: 10.08rem;
   align-items: center;
 }
 
