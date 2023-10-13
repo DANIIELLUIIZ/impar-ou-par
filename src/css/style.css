@@ -109,7 +109,7 @@ body {
 #hand-box {
   display: flex;
   height: 10.08rem;
-  align-items: center;
+  
 }
 
 #hand-box img {
@@ -174,7 +174,7 @@ body {
   border: none;
   outline: none;
   border-radius: 0.3rem;
-  background-color: var(--main-color);
+  background-color: rgb(145, 144, 144);
 }
 
 #input-box input::-webkit-inner-spin-button,
@@ -198,10 +198,10 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-#menu-box > button:hover,
+.menu-box > button:hover,
 .restart-game:hover {
   color: var(--main-color);
-  background-color: var(--itens-color);
+
 }
 
 .result-box {
@@ -224,7 +224,7 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.3rem;
-  background-color: var(--main-color);
+  background-color: var(--itens-color);
 
   transition: 0.3s ease-in-out;
 }

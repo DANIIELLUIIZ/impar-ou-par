@@ -70,7 +70,12 @@ function userChoice() {
 function changeHand(userValue, computerValue) {
   // faz a troca das imagens conforme escolha do usuário e numeros da máquina
   userImg.setAttribute('src', `./src/img/hand-${userValue}.png`)
+  userImg.setAttribute('alt', 'mão que representa o usuario, ao lado direito.')
   computerImg.setAttribute('src', `./src/img/hand-${computerValue}.png`)
+  computerImg.setAttribute(
+    'alt',
+    'mão que representa a máquina, ao lado esquerdo.'
+  )
 }
 function showResult() {
   // Mostra o resultado
@@ -91,8 +96,10 @@ function restartGame() {
   infoBox.classList.add('hide')
 
   inputUserNumber.value = ''
-  userImg.setAttribute('src', ``)
-  computerImg.setAttribute('src', ``)
+  userImg.setAttribute('alt', '')
+  userImg.setAttribute('src', '')
+  computerImg.setAttribute('src', '')
+  computerImg.setAttribute('alt', '')
   gameStartBtn.innerHTML = 'jogar'
 }
 
