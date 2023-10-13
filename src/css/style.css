@@ -96,13 +96,15 @@ body {
 /* Game Screen */
 .game-screen {
   display: flex;
+  position: relative;
   flex-direction: column;
+  align-items: center;
+  padding: 2rem;
   gap: 2rem;
 }
 #hand-box {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
+  align-items: center;
 }
 
 #hand-box img {
@@ -118,10 +120,24 @@ body {
   display: flex;
   align-items: center;
 }
-#user-hand h1 {
+.info {
+  display: flex;
+  position: absolute;
+  right: 0rem;
+  top: 6rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(270deg);
+}
+.info h1 {
   font-size: 1rem;
   color: #fff;
-  transform: rotate(270deg);
+}
+
+#choice {
+  font-size: 1.4rem;
+  color: orangered;
 }
 
 .menu-box {

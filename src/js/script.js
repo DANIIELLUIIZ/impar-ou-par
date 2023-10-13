@@ -1,5 +1,6 @@
 const btnStart = document.querySelector('#start')
 const restartGameBtn = document.querySelector('#restart-game')
+const gameStartBtn = document.querySelector('#start-game')
 const menuBox = document.querySelector('.menu-box')
 const startScreen = document.querySelector('.start-screen')
 const gameScreen = document.querySelector('.game-screen')
@@ -22,8 +23,11 @@ function changeStartScreen() {
 
 function userChoice() {
   const startOptions = document.querySelector('#start-options')
+  const choiceValue = document.querySelector('#choice')
 
   let btnStartValue = startOptions.value
+
+  choiceValue.innerHTML = btnStartValue
   return btnStartValue
 }
 
@@ -37,8 +41,11 @@ btnStart.addEventListener('click', e => {
   e.preventDefault()
   main()
 })
-
 restartGameBtn.addEventListener('click', () => {
   startScreen.classList.toggle('hide')
   gameScreen.classList.toggle('hide')
+})
+
+gameStartBtn.addEventListener('click', () => {
+  console.log('oi')
 })
