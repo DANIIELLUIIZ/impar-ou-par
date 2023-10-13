@@ -102,18 +102,19 @@ body {
 #hand-box {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 #hand-box img {
-  width: 8rem;
+  width: 7rem;
 }
 
 #computer-hand > img {
   transform: rotate(180deg);
 }
 
-#user-hand {
+#user-hand,
+#computer-hand {
   display: flex;
   align-items: center;
 }
