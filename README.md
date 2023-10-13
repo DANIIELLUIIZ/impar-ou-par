@@ -19,7 +19,7 @@
 
 ### Tela inserir valor e tela resultado:
 
-<img src="./src/design/tela-valores.png" width="332px">
+<img src="./src/design/tela-valores.png" width="360px">
 <img src="./src/design/tela-resultado.png" width="360px" >
 
 ### Resultado:
