@@ -18,15 +18,18 @@
   </head>
   <body>
     <div id="container">
-      <section id="start-screen">
+      <section id="start-screen"> 
         <h1 id="welcome">Bem vindo</h1>
+        <img id="logo" src="./src/img/logo.png">
         <div id="start-menu">
           <label for="start-options">Escolha entre par ou ímpar:</label>
-          <select name="start-options">
+          <select id="start-options" name="start-options">
+            <option disabled selected hidden>ESCOLHA</option>
             <option value="impar">Ímpar</option>
             <option value="par">Par</option>
           </select>
         </div>
+        <button id="start">começar</button>
       </section>
     </div>
   </body>
