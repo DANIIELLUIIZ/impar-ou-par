@@ -20,13 +20,17 @@
     <div id="container">
       <section class="start-screen">
         <h1 id="welcome">Bem vindo</h1>
-        <img id="logo" src="./src/img/logo.png" />
+        <img
+          id="logo"
+          src="./src/img/logo.png"
+          alt="logo com duas mãos, uma mão com o polegar e o indicar aberto, totalizando um dois e outra mão totalmente aberta, totalizando um cinco. Uma para frente para a outra na horizontal."
+        />
         <div id="start-menu">
           <label for="start-options">Escolha entre par ou ímpar:</label>
           <select id="start-options" name="start-options">
-            <option disabled selected hidden>ESCOLHA</option>
-            <option value="impar">Ímpar</option>
-            <option value="par">Par</option>
+            <option disabled selected hidden>escolha</option>
+            <option value="impar">ímpar</option>
+            <option value="par">par</option>
           </select>
         </div>
         <button id="start">começar</button>
@@ -37,12 +41,16 @@
             <img
               id="computer-img"
               src=""
-              alt=""
+              alt="mão que representa a máquina,ao lado esquerdo"
               srcset=""
             />
           </div>
           <div id="user-hand">
-            <img id="user-img" src="" alt="" />
+            <img
+              id="user-img"
+              src=""
+              alt="mão que representa o usuario, ao lado direito."
+            />
           </div>
         </div>
         <div class="info hide">
@@ -52,16 +60,26 @@
         <div class="menu-box">
           <div id="input-box">
             <label for="user-number">Digite um número de 0 a 10:</label>
-            <input id="input-number" type="number" name="user-number" required />
+            <input
+              id="input-number"
+              type="number"
+              name="user-number"
+              required
+            />
           </div>
-          <button id="start-game">jogar</button>
+          <button id="start-game" aria-label="começar o jogo.">jogar</button>
         </div>
 
         <div class="result-box hide">
           <span id="value"></span>
           <span id="result"></span>
         </div>
-        <button class="restart-game hide">trocar</button>
+        <button
+          class="restart-game hide"
+          aria-label="retornar ao início para fazer a troca"
+        >
+          trocar
+        </button>
       </section>
     </div>
   </body>

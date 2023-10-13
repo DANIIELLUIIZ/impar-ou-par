@@ -1,3 +1,8 @@
+:root {
+  --main-color: rgb(2, 98, 72);
+  --itens-color: rgb(250, 74, 9);
+  --sub-itens-color: #f7f4f4;
+}
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +18,7 @@ body {
   justify-content: center;
   align-content: center;
   font-family: Gabarito;
-  background-color: rgb(2, 98, 72);
+  background-color: var(--main-color);
 }
 #container {
   display: flex;
@@ -26,22 +31,21 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  z-index: 10;
 }
 .start-screen h1 {
   position: relative;
-  color: orangered;
+  color: var(--itens-color);
   font-size: 3rem;
 }
 .start-screen h1::after {
   content: '';
   position: absolute;
   height: 2.5px;
-  width: 6rem;
+  width: 5.7rem;
   bottom: 3px;
-  left: 0;
+  left: 2px;
   border-radius: 1rem;
-  background-color: #bab9b9;
+  background-color: var(--sub-itens-color);
 }
 
 #start-menu {
@@ -51,31 +55,31 @@ body {
 
 #start-menu label {
   font-size: 1rem;
-  color: #ffff;
+  color: var(--sub-itens-color);
   margin-bottom: 0.2rem;
 }
 
 #start-options {
   font-size: 1.2rem;
   font-weight: bold;
-  color: orangered;
+  color: var(--itens-color);
   text-transform: uppercase;
   padding: 0.2rem;
   border: none;
   outline: none;
-  background-color: rgb(2, 98, 72);
+  background-color: var(--main-color);
 }
 #start-options option {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffffff;
+  color: var(--sub-itens-color);
   padding: 0.2rem;
 }
 
 .start-screen > button {
   cursor: pointer;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--sub-itens-color);
 
   text-transform: uppercase;
   font-weight: bold;
@@ -83,14 +87,14 @@ body {
   padding: 0.2rem 1rem;
   border: none;
   border-radius: 0.3rem;
-  background-color: orangered;
+  background-color: var(--itens-color);
 
   transition: 0.3s ease-in-out;
 }
 
 .start-screen > button:hover {
-  color: rgb(2, 98, 72);
-  background-color: orangered;
+  color: var(--main-color);
+  background-color: var(--itens-color);
 }
 
 /* Game Screen */
@@ -133,12 +137,12 @@ body {
 }
 .info h1 {
   font-size: 1rem;
-  color: #fff;
+  color: var(--sub-itens-color);
 }
 
 .info span {
   font-size: 1.4rem;
-  color: orangered;
+  color: var(--itens-color);
 }
 
 .menu-box {
@@ -157,20 +161,20 @@ body {
 }
 #input-box label {
   font-size: 1rem;
-  color: #ffff;
+  color: var(--sub-itens-color);
   margin-bottom: 0.4rem;
 }
 #input-box input {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffff;
+  color: var(--sub-itens-color);
   text-align: center;
   text-transform: uppercase;
   padding: 0.2rem;
   border: none;
   outline: none;
   border-radius: 0.3rem;
-  background-color: rgb(117, 188, 169);
+  background-color: var(--main-color);
 }
 
 #input-box input::-webkit-inner-spin-button,
@@ -181,7 +185,7 @@ body {
 .menu-box > button {
   cursor: pointer;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--sub-itens-color);
 
   text-transform: uppercase;
   font-weight: bold;
@@ -189,15 +193,15 @@ body {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.3rem;
-  background-color: orangered;
+  background-color: var(--itens-color);
 
   transition: 0.3s ease-in-out;
 }
 
 #menu-box > button:hover,
 .restart-game:hover {
-  color: rgb(2, 98, 72);
-  background-color: orangered;
+  color: var(--main-color);
+  background-color: var(--itens-color);
 }
 
 .result-box {
@@ -207,20 +211,20 @@ body {
 }
 .result-box > span {
   font-size: 0.9rem;
-  color: #ffff;
+  color:var(--sub-itens-color);
   margin-bottom: 0.4rem;
 }
 .restart-game {
   cursor: pointer;
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--sub-itens-color);
 
   text-transform: uppercase;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.3rem;
-  background-color: orangered;
+  background-color: var(--main-color);
 
   transition: 0.3s ease-in-out;
 }

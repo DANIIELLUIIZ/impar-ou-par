@@ -16,7 +16,7 @@ function start() {
 }
 function changeStartScreen() {
   //Faz o input ficar vermelho caso o usuário não escolha uma opcão.
-  if (userChoice() === 'ESCOLHA') {
+  if (userChoice() === 'escolha') {
     startOptions.style.backgroundColor = '#FF4500'
     startOptions.style.color = '#ffff'
     return
