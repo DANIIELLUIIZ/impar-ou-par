@@ -11,7 +11,7 @@ body {
   width: 100%;
   height: 100vh;
   justify-content: center;
-  align-items: center;
+  align-content: center;
   font-family: Gabarito;
   background-color: rgb(2, 98, 72);
 }
@@ -100,7 +100,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 #hand-box {
   display: flex;
@@ -135,7 +135,7 @@ body {
   color: #fff;
 }
 
-#choice {
+.info span {
   font-size: 1.4rem;
   color: orangered;
 }
@@ -177,8 +177,7 @@ body {
   appearance: none;
 }
 
-.menu-box > button,
-.result > button {
+.menu-box > button {
   cursor: pointer;
   font-size: 1.2rem;
   color: #fff;
@@ -195,23 +194,35 @@ body {
 }
 
 #menu-box > button:hover,
-.result > button:hover {
+.restart-game:hover {
   color: rgb(2, 98, 72);
   background-color: orangered;
 }
 
-.result {
+.result-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem;
 }
-.result > span {
-  font-size: 1.5rem;
+.result-box > span {
+  font-size: 0.9rem;
   color: #ffff;
   margin-bottom: 0.4rem;
 }
+.restart-game {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
 
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: orangered;
+
+  transition: 0.3s ease-in-out;
+}
 .hide {
   display: none;
 }

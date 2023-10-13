@@ -34,29 +34,34 @@
       <section class="game-screen hide">
         <div id="hand-box">
           <div id="computer-hand">
-            <img src="./src/img/hand-10.png" alt="" srcset="" />
+            <img
+              id="computer-img"
+              src=""
+              alt=""
+              srcset=""
+            />
           </div>
           <div id="user-hand">
-            <img src="./src/img/hand-6.png" alt="" />
+            <img id="user-img" src="" alt="" />
           </div>
         </div>
-        <div class="info">
+        <div class="info hide">
           <h1>VOCÊ</h1>
           <span id="choice"></span>
         </div>
         <div class="menu-box">
           <div id="input-box">
-            <label for="user-number">Digite um número de 1 a 10:</label>
+            <label for="user-number">Digite um número de 0 a 10:</label>
             <input id="input-number" type="number" name="user-number" />
           </div>
-          <button id="start-game">começar</button>
+          <button id="start-game">jogar</button>
         </div>
 
-        <div class="result hide">
-          <span id="value">8</span>
-          <span id="result">você venceu</span>
-          <button id="restart-game">jogar de novo</button>
+        <div class="result-box hide">
+          <span id="value"></span>
+          <span id="result"></span>
         </div>
+        <button class="restart-game hide">trocar</button>
       </section>
     </div>
   </body>

@@ -1,27 +1,64 @@
 const btnStart = document.querySelector('#start')
-const restartGameBtn = document.querySelector('#restart-game')
 const gameStartBtn = document.querySelector('#start-game')
-const menuBox = document.querySelector('.menu-box')
+const restartGameBtn = document.querySelector('.restart-game')
 const startScreen = document.querySelector('.start-screen')
+const menuBox = document.querySelector('.menu-box')
 const gameScreen = document.querySelector('.game-screen')
 const startOptions = document.querySelector('#start-options')
+const resultBox = document.querySelector('.result-box')
+const infoBox = document.querySelector('.info')
+const userImg = document.querySelector('#user-img')
+const computerImg = document.querySelector('#computer-img')
 
-function main() {
+function start() {
   userChoice()
   changeStartScreen()
 }
-
 function changeStartScreen() {
+  //Faz o input ficar vermelho caso o usuário não escolha uma opcão.
   if (userChoice() === 'ESCOLHA') {
     startOptions.style.backgroundColor = '#FF4500'
     startOptions.style.color = '#ffff'
     return
   }
-  startScreen.classList.toggle('hide')
-  gameScreen.classList.toggle('hide')
+  //Munda a tela de selecao para a tela do jogo
+  startScreen.classList.add('hide')
+  gameScreen.classList.remove('hide')
 }
+function gameStart() {
+  // Inicia o jogo, realizando comparacoes e determinando o resultado final.
+  const inputUserNumber = document.querySelector('#input-number')
+  const result = document.querySelector('#result')
+  const totalValue = document.querySelector('#value')
 
+  let computerValue = parseInt(Math.random() * 11)
+  let userValue = parseFloat(inputUserNumber.value)
+  let total = computerValue + userValue
+
+  if (userValue > 10) {
+    window.alert('Apenas valores de 0 a 10!')
+    return
+  } else if (
+    startOptions.value === 'par' &&
+    (computerValue + userValue) % 2 === 0
+  ) {
+    result.innerHTML = 'Você ganhou'
+  } else if (
+    startOptions.value === 'impar' &&
+    (computerValue + userValue) % 2 === 1
+  ) {
+    result.innerHTML = 'Você ganhou'
+  } else {
+    result.innerHTML = 'Você perdeu'
+  }
+  totalValue.innerHTML = `total: ${total}`
+
+  showResult()
+
+  changeHand(userValue, computerValue)
+}
 function userChoice() {
+  // pega a escolha do usuário, entre par ou impar
   const startOptions = document.querySelector('#start-options')
   const choiceValue = document.querySelector('#choice')
 
@@ -30,22 +67,42 @@ function userChoice() {
   choiceValue.innerHTML = btnStartValue
   return btnStartValue
 }
-
+function changeHand(userValue, computerValue) {
+  // faz a troca das imagens conforme escolha do usuário e numeros da máquina
+  userImg.setAttribute('src', `./src/img/hand-${userValue}.png`)
+  computerImg.setAttribute('src', `./src/img/hand-${computerValue}.png`)
+}
+function showResult() {
+  // Mostra o resultado
+  restartGameBtn.classList.remove('hide')
+  resultBox.classList.remove('hide')
+  infoBox.classList.remove('hide')
+}
 function restartGame() {
-  menuBox.classList.toggle('hide')
-  startScreen.classList.toggle('hide')
-  gameScreen.classList.toggle('hide')
+  // volta para tela inicial removendo imagens,tela jogo, inputs e menus
+  const inputUserNumber = document.querySelector('#input-number')
+
+  restartGameBtn.classList.add('hide')
+  resultBox.classList.add('hide')
+  gameScreen.classList.add('hide')
+  startScreen.classList.remove('hide')
+  infoBox.classList.add('hide')
+
+  inputUserNumber.value = ''
+  userImg.setAttribute('src', ``)
+  computerImg.setAttribute('src', ``)
 }
 
 btnStart.addEventListener('click', e => {
   e.preventDefault()
-  main()
-})
-restartGameBtn.addEventListener('click', () => {
-  startScreen.classList.toggle('hide')
-  gameScreen.classList.toggle('hide')
+  start()
 })
 
-gameStartBtn.addEventListener('click', () => {
-  console.log('oi')
+gameStartBtn.addEventListener('click', e => {
+  e.preventDefault()
+  gameStart()
+})
+
+restartGameBtn.addEventListener('click', () => {
+  restartGame()
 })
