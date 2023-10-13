@@ -15,18 +15,25 @@ body {
   font-family: Gabarito;
   background-color: rgb(2, 98, 72);
 }
-#start-screen {
+#container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.start-screen {
+  display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  z-index: 10;
 }
-#start-screen h1 {
+.start-screen h1 {
   position: relative;
   color: orangered;
   font-size: 3rem;
 }
-#start-screen h1::after {
+.start-screen h1::after {
   content: '';
   position: absolute;
   height: 2.5px;
@@ -65,7 +72,7 @@ body {
   padding: 0.2rem;
 }
 
-#start-screen > button {
+.start-screen > button {
   cursor: pointer;
   font-size: 1.2rem;
   color: #fff;
@@ -81,7 +88,113 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-#start-screen > button:hover {
+.start-screen > button:hover {
   color: rgb(2, 98, 72);
   background-color: orangered;
+}
+
+/* Game Screen */
+.game-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#hand-box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#hand-box img {
+  width: 8rem;
+}
+
+#computer-hand > img {
+  transform: rotate(180deg);
+}
+
+#user-hand {
+  display: flex;
+  align-items: center;
+}
+#user-hand h1 {
+  font-size: 1rem;
+  color: #fff;
+  transform: rotate(270deg);
+}
+
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 0.5rem 0;
+}
+
+#input-box {
+  display: flex;
+  flex-direction: column;
+}
+#input-box label {
+  font-size: 1rem;
+  color: #ffff;
+  margin-bottom: 0.4rem;
+}
+#input-box input {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffff;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  border-radius: 0.3rem;
+  background-color: rgb(117, 188, 169);
+}
+
+#input-box input::-webkit-inner-spin-button,
+#input-box input::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+.menu-box > button,
+.result > button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #fff;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 4rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  background-color: orangered;
+
+  transition: 0.3s ease-in-out;
+}
+
+#menu-box > button:hover,
+.result > button:hover {
+  color: rgb(2, 98, 72);
+  background-color: orangered;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+}
+.result > span {
+  font-size: 1.5rem;
+  color: #ffff;
+  margin-bottom: 0.4rem;
+}
+
+.hide {
+  display: none;
 }

@@ -18,9 +18,9 @@
   </head>
   <body>
     <div id="container">
-      <section id="start-screen"> 
+      <section class="start-screen hide">
         <h1 id="welcome">Bem vindo</h1>
-        <img id="logo" src="./src/img/logo.png">
+        <img id="logo" src="./src/img/logo.png" />
         <div id="start-menu">
           <label for="start-options">Escolha entre par ou ímpar:</label>
           <select id="start-options" name="start-options">
@@ -30,6 +30,30 @@
           </select>
         </div>
         <button id="start">começar</button>
+      </section>
+      <section class="game-screen">
+        <div id="hand-box">
+          <div id="computer-hand">
+            <img src="./src/img/hand-1.png" alt="" srcset="" />
+          </div>
+          <div id="user-hand">
+            <img src="./src/img/hand-1.png" alt="" />
+            <h1>VOCÊ</h1>
+          </div>
+        </div>
+        <div class="menu-box">
+          <div id="input-box">
+            <label for="user-number">Digite um número de 1 a 10:</label>
+            <input id="input-number" type="number" name="user-number" />
+          </div>
+          <button id="start-btn">começar</button>
+        </div>
+
+        <div class="result hide">
+          <span id="value">8</span>
+          <span id="result">você venceu</span>
+          <button id="restart-game">jogar de novo</button>
+        </div>
       </section>
     </div>
   </body>
