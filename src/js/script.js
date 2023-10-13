@@ -35,8 +35,8 @@ function gameStart() {
   let userValue = parseFloat(inputUserNumber.value)
   let total = computerValue + userValue
 
-  if (userValue > 10) {
-    window.alert('Apenas valores de 0 a 10!')
+  if (userValue > 10 || userValue < 0 || inputUserNumber.value === '') {
+    window.alert('insira um valor de 0 a 10!')
     return
   } else if (
     startOptions.value === 'par' &&
@@ -77,6 +77,8 @@ function showResult() {
   restartGameBtn.classList.remove('hide')
   resultBox.classList.remove('hide')
   infoBox.classList.remove('hide')
+
+  gameStartBtn.innerHTML = 'tentar novamente.'
 }
 function restartGame() {
   // volta para tela inicial removendo imagens,tela jogo, inputs e menus
@@ -91,6 +93,7 @@ function restartGame() {
   inputUserNumber.value = ''
   userImg.setAttribute('src', ``)
   computerImg.setAttribute('src', ``)
+  gameStartBtn.innerHTML = 'jogar'
 }
 
 btnStart.addEventListener('click', e => {
