@@ -24,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 .start-screen {
   display: flex;
@@ -109,7 +110,6 @@ body {
 #hand-box {
   display: flex;
   height: 10.08rem;
-  
 }
 
 #hand-box img {
@@ -201,7 +201,6 @@ body {
 .menu-box > button:hover,
 .restart-game:hover {
   color: var(--main-color);
-
 }
 
 .result-box {
@@ -211,7 +210,7 @@ body {
 }
 .result-box > span {
   font-size: 0.9rem;
-  color:var(--sub-itens-color);
+  color: var(--sub-itens-color);
   margin-bottom: 0.4rem;
 }
 .restart-game {
